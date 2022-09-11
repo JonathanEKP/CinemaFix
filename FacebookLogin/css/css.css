@@ -32,3 +32,26 @@
 #face{
     letter-spacing: -1px;
 }
+
+.bgCard{
+    background-color: #F5F6F7;
+}
+
+.close{
+    left: 4px;
+    position: absolute;
+    text-align: center;
+    top: 4px;
+    -webkit-user-select: none;
+    z-index: 1;
+    border: none;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 16px;
+    height: 16px;
+    transition: all 100ms cubic-bezier(.08,.52,.52,1);
+    width: 16px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+}
