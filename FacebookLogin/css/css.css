@@ -1,0 +1,34 @@
+.bg{
+    background-color: #F0F2F5;
+}
+
+.marginF{
+    margin: 15vh 20vh;
+}
+
+.sesion{
+    font-size: 28px;
+    margin-top: 0%;
+    font-family: 'SF Pro Display', sans-serif; 
+    letter-spacing: 0.5px;
+    font-weight: 300;
+}
+
+.fotoT{
+    margin-top: -19px;
+    font-size: 15px;
+}
+
+.userName{
+    font-size: 19px;
+}
+
+#perfil:hover{
+    cursor: pointer;
+    box-shadow: 0 0 15px #6b6b6b4f;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#face{
+    letter-spacing: -1px;
+}
