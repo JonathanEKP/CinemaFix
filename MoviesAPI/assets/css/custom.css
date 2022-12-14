@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+*{
+    font-family: 'Fira Sans', sans-serif;
+
+}
+
+body{
+    background-color: #141318;
+}
+
+/*Style for navbar*/
+#navBar{
+    background-color: #151419;
+}
+
+/*Style for hero*/
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    height: 80vh;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,1)
+    ),
+    url("../img/got-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+/*Style for movie cards*/
+img{
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-body{
+    height: 80px;
+}
+
+.card-img-top{
+    height: 60vh;
+    
+}
+
+#btnInfo:hover{
+    cursor: pointer;
+}
