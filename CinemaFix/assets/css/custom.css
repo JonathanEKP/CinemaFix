@@ -9,6 +9,7 @@ body{
     background-color: #141318;
 }
 
+/*Styles for index*/
 /*Style for navbar*/
 #navBar{
     background-color: #151419;
@@ -51,4 +52,28 @@ img{
 
 #btnInfo:hover{
     cursor: pointer;
+}
+
+/*Styles for movies.html*/
+#hero-movies{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 88vh;
+    color: white;
+    background-image: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.1),
+        rgba(0,0,0,1)
+    ),
+    url("../img/harryPotterBg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+#botones-navegacion{
+    visibility: hidden;
 }

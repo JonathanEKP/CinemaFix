@@ -16,6 +16,7 @@
         if(pageNumber<1000){
             pageNumber+=1
             loadMovie()
+            paginationNumber(pageNumber)
         }
     })
 
@@ -23,10 +24,37 @@
         if(pageNumber>1){
             pageNumber-=1
             loadMovie()
+            paginationNumber(pageNumber)
         }
-
     })
+    //Agregamos paginacion al inicio de la pantalla
+    const btnPaginationPrev = document.getElementById("pagination-previous")
+    const btnPaginationNext = document.getElementById("pagination-next")
+    const first_pagination = document.getElementById("first-pagination")
+
+    btnPaginationPrev.addEventListener('click',()=>{
+        if(pageNumber>1){
+            pageNumber-=1
+            loadMovie()
+            paginationNumber(pageNumber)
+        }
+    })
+    
+    btnPaginationNext.addEventListener('click',()=>{
+        if(pageNumber<1000){
+            pageNumber+=1
+            loadMovie()
+            paginationNumber(pageNumber)
+        }
+    })
+
+    function paginationNumber(number){
+        first_pagination.innerText = `Page ${pageNumber}`
+    }
+
+
 //#endregion
+
 
 
 //#region Mostrar la informacion procesada
@@ -35,9 +63,6 @@ const loadMovie = async() =>{
     try{
         //Pedimos las peliculas populares de la plataforma
         const reply = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=adedc1dcf969c858a80022097ce9a27c&page=${pageNumber}`)
-        const searchM = await fetch('https://api.themoviedb.org/3/search/movie?api_key=adedc1dcf969c858a80022097ce9a27c&language=en-US&query=home%20alone')
-        const find = await searchM.json()
-        console.log(find.results)
 
         //Si la respuesta es correcta
         if(reply.status === 200){
@@ -77,7 +102,6 @@ const loadMovie = async() =>{
         alert(error)
     }
 }
-loadMovie()
 
 
 //Cargar modal con informacion adicional de la pelicula
@@ -134,6 +158,7 @@ const moreInfo = async (id)=>{
                                 <p class="fs-6 fst-italic">${movies.tagline}</p>
                                 <h1 class="modal-title fs-5 mb-3">Overview <span class="badge text-bg-light">${movies.vote_average.toFixed(1)}</span></h1> 
                                 <p class="fs-6">${movies.overview}</p>
+                                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
 
@@ -161,3 +186,8 @@ const moreInfo = async (id)=>{
     }
     
 }
+
+//#region LLamando funcioness
+loadMovie()
+paginationNumber(pageNumber)
+//#endregion
