@@ -5,5 +5,5 @@ El sitio está hecho con
   >CSS
   >Bootstrap
   >JavaScript
-Además, se usa la API de https://www.themoviedb.org/.
+Además, se usa la API de themoviedb.
 La principal funcion del sitio es mostrar información de peliculas, series y lo más popular del momento.
