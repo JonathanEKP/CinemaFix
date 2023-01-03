@@ -1,6 +1,6 @@
 "# PersonalProyect" 
 Este proyecto es para poner a prueba los conocimientos adquiridos sobre el desarrollo web.
-El sitio está hecho con:
+El sitio está hecho con
   >HTML
   >CSS
   >Bootstrap
