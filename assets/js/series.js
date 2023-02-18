@@ -98,7 +98,6 @@ async function moreInfo(id){
             //Le quitamos el ultimo valor del string para que no se muestre , al final
             genre_name = genres.slice(0,-1)
             //Agregamos la informacion al modal
-            console.log(series)
             modalInfo = `
                         <div class="modal-header text-white border border-0">
                             <h1 class="modal-title fs-5 " id="modalSeriesLabel">${series.name} <span class="text-muted">(${dateSerie[0]})</span></h1>
